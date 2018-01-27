@@ -7,8 +7,8 @@
     </requires>
     <extension point="xbmc.service" library="main.py" start="login"/>
     <extension point="xbmc.addon.metadata">
-        <summary lang="en_US">Enables subs when the audio stream does not match the user&#39;s preference</summary>
-        <description lang="en_US"></description>
+        <summary lang="en">Enables subs when the audio stream does not match the user&#39;s preference</summary>
+        <description lang="en"></description>
         <language></language>
         <platform>all</platform>
         <license>MIT</license>

@@ -12,7 +12,7 @@ logger = logging.getLogger(ADDON.getAddonInfo('id'))
 
 def run():
     monitor = xbmc.Monitor()
-    player_monitor = player.AutoSubEnablePlayer(logger=logger)
+    player_monitor = player.AutoSubEnablePlayer(logger=logger, addon=ADDON)
 
     while not monitor.abortRequested():
         if monitor.waitForAbort(10):

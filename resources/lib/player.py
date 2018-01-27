@@ -8,9 +8,10 @@ class AutoSubEnablePlayer(xbmc.Player):
     def __init__(self, *args, **kwargs):
         xbmc.Player.__init__(self)
         self.logger = kwargs['logger']
+        self.addon = kwargs['addon']
 
     def get_preferred_lang(self):
-        return 'eng'
+        return xbmc.convertLanguage(self.addon.getSetting('preferred_lang'), xbmc.ISO_639_2)
 
     def get_active_player_id(self):
         active_player = kodiutils.jsonrpc(1, {
